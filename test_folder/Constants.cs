@@ -25,7 +25,7 @@ namespace GFK.Business
 			    return Constants.DateTimeMinValue;
 			else if (v > Constants.DateTimeMaxValue) 
 			    v = Constants.DateTimeMaxValue;
-			return v;			
+			return v - 1;			
 		}        
     }
 }
