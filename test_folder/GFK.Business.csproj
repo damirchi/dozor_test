@@ -1,0 +1,321 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F99DF294-0541-442C-B303-ADB96B8482D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GFK.Business</RootNamespace>
+    <AssemblyName>GFK.Business</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>GFK.Business.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/GFK.Business/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Dev|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-Dev\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=1.2.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyFileVersion.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Domain\Application\CurrencyHolder.cs" />
+    <Compile Include="Domain\Application\LocaleHolder.cs" />
+    <Compile Include="Domain\Application\UserHolder.cs" />
+    <Compile Include="Domain\AssemblyCodes\AssemblyCode.cs" />
+    <Compile Include="Domain\AssemblyCodes\AssemblyCodeFilter.cs" />
+    <Compile Include="Domain\AssemblyCodes\IAssemblyCodeManager.cs" />
+    <Compile Include="Domain\AvCalendar\AllocatedEvent.cs" />
+    <Compile Include="Domain\AvCalendar\Appointment.cs" />
+    <Compile Include="Domain\AvCalendar\AppointmentFilter.cs" />
+    <Compile Include="Domain\AvCalendar\AvailabilityLevel.cs" />
+    <Compile Include="Domain\AvCalendar\CalendarType.cs" />
+    <Compile Include="Domain\AvCalendar\CarrierCoverageLevels.cs" />
+    <Compile Include="Domain\AvCalendar\CompletedSETEvent.cs" />
+    <Compile Include="Domain\AvCalendar\CarrierCoverage.cs" />
+    <Compile Include="Domain\AvCalendar\Country.cs" />
+    <Compile Include="Domain\AvCalendar\CountryGroup.cs" />
+    <Compile Include="Domain\AvCalendar\CountryTimeZone.cs" />
+    <Compile Include="Domain\AvCalendar\EventStatus.cs" />
+    <Compile Include="Domain\AvCalendar\TeamAvailability.cs" />
+    <Compile Include="Domain\AvCalendar\UserAvailability.cs" />
+    <Compile Include="Domain\AvCalendar\UserWorkload.cs" />
+    <Compile Include="Domain\Base\EntityWithStat.cs" />
+    <Compile Include="Domain\Base\IEntityWithStat.cs" />
+    <Compile Include="Domain\Base\IStat.cs" />
+    <Compile Include="Domain\Base\ITimeBased.cs" />
+    <Compile Include="Domain\Base\IUserManaged.cs" />
+    <Compile Include="Domain\CalendarIntegration\ActiveEventStatus.cs" />
+    <Compile Include="Domain\CalendarIntegration\ActiveWorkflowType.cs" />
+    <Compile Include="Domain\CalendarIntegration\Approver.cs" />
+    <Compile Include="Domain\CalendarIntegration\Calendar.cs" />
+    <Compile Include="Domain\CalendarIntegration\Country.cs" />
+    <Compile Include="Domain\CalendarIntegration\EventRequest.cs" />
+    <Compile Include="Domain\CalendarIntegration\EventRequestFilter.cs" />
+    <Compile Include="Domain\CalendarIntegration\EventRequestResultItem.cs" />
+    <Compile Include="Domain\CalendarIntegration\EVRParam.cs" />
+    <Compile Include="Domain\CalendarIntegration\IntergationExchangeLog.cs" />
+    <Compile Include="Domain\CalendarIntegration\IntergationExchangeQueue.cs" />
+    <Compile Include="Domain\CalendarIntegration\IntergationExchangeQueueFilter.cs" />
+    <Compile Include="Domain\CalendarIntegration\TrainingOrSpecialEvent.cs" />
+    <Compile Include="Domain\Currencies\CurrencyFilter.cs" />
+    <Compile Include="Domain\Currencies\CurrencyRate.cs" />
+    <Compile Include="Domain\Currencies\Money.cs" />
+    <Compile Include="Domain\Dictionaries\CommonConstants.cs" />
+    <Compile Include="Domain\Dictionaries\IDictionariesManager.cs" />
+    <Compile Include="Domain\Filters\FilterDescription.cs" />
+    <Compile Include="Domain\Filters\IFiltersManager.cs" />
+    <Compile Include="Domain\Filters\SimpleFiltersManager.cs" />
+    <Compile Include="Domain\Forms\Answer.cs" />
+    <Compile Include="Domain\Forms\AnswerControls.cs" />
+    <Compile Include="Domain\Forms\AnswerGPSValue.cs" />
+    <Compile Include="Domain\Forms\Answers\BooleanAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\ChoicesetAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\DatetimeAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\DictionaryAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\FormRefAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\GPSAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\IChoiceValueAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\NumericAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\SubformAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\TextAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\TextareaAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\TimeAnswer.cs" />
+    <Compile Include="Domain\Forms\Answers\UserAnswer.cs" />
+    <Compile Include="Domain\Forms\AnswerTextValue.cs" />
+    <Compile Include="Domain\Forms\AutoUpdating\CreateByUpdater.cs" />
+    <Compile Include="Domain\Forms\AutoUpdating\CreationDateUpdater.cs" />
+    <Compile Include="Domain\Forms\AutoUpdating\IAutoUpdater.cs" />
+    <Compile Include="Domain\Forms\AutoUpdating\ModificationDateUpdater.cs" />
+    <Compile Include="Domain\Forms\AutoUpdating\ModifiedByUpdater.cs" />
+    <Compile Include="Domain\Forms\AutoUpdating\UpdatingEvent.cs" />
+    <Compile Include="Domain\Forms\Choice.cs" />
+    <Compile Include="Domain\Forms\ChoiceSet.cs" />
+    <Compile Include="Domain\Forms\ChoiceSetFilter.cs" />
+    <Compile Include="Domain\Forms\DBImage.cs" />
+    <Compile Include="Domain\Forms\EntityAttribute.cs" />
+    <Compile Include="Domain\Forms\EntityDescriptor.cs" />
+    <Compile Include="Domain\Forms\EntityWithTextValue.cs" />
+    <Compile Include="Domain\Forms\Form.cs" />
+    <Compile Include="Domain\Forms\FormDictionaries.cs" />
+    <Compile Include="Domain\Forms\FormFilter.cs" />
+    <Compile Include="Domain\Forms\FormImage.cs" />
+    <Compile Include="Domain\Forms\FormLanguage.cs" />
+    <Compile Include="Domain\Forms\FormLegacyData.cs" />
+    <Compile Include="Domain\Forms\FormQuestion.cs" />
+    <Compile Include="Domain\Forms\FormType.cs" />
+    <Compile Include="Domain\Forms\FormTypeGroup.cs" />
+    <Compile Include="Domain\Forms\FormView.cs" />
+    <Compile Include="Domain\Forms\IncompletedTranslation.cs" />
+    <Compile Include="Domain\Forms\IntegrationRecord.cs" />
+    <Compile Include="Domain\Forms\MobilePage.cs" />
+    <Compile Include="Domain\Forms\MobilePageDescription.cs" />
+    <Compile Include="Domain\Forms\QuestionGroup.cs" />
+    <Compile Include="Domain\Forms\Question.cs" />
+    <Compile Include="Domain\Forms\QuestionDescriptions.cs" />
+    <Compile Include="Domain\Forms\QuestionExtensions.cs" />
+    <Compile Include="Domain\Forms\QuestionFilter.cs" />
+    <Compile Include="Domain\Forms\QuestionGroupTemplate.cs" />
+    <Compile Include="Domain\Forms\QuestionLink.cs" />
+    <Compile Include="Domain\Forms\QuestionLinkFilter.cs" />
+    <Compile Include="Domain\Forms\QuestionTemplate.cs" />
+    <Compile Include="Domain\Forms\QuestionValidationMessages.cs" />
+    <Compile Include="Domain\Forms\Record.cs" />
+    <Compile Include="Domain\Forms\RecordExtensions.cs" />
+    <Compile Include="Domain\Forms\RecordFilter.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\AnswerFilterValue.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\DateTimeRange.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\ExportRecordSearchFilterOption.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\ExportRecordSearchResultItem.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\RecordAnswerSearchResultItem.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\RecordGlobalAnswersItem.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\RecordSearchFilter.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\RecordSearchResultItem.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\RecordsStatistic.cs" />
+    <Compile Include="Domain\Forms\RecordsSearch\RecordsStatisticParameters.cs" />
+    <Compile Include="Domain\Forms\TextValue.cs" />
+    <Compile Include="Domain\Histories\IHistoricalEntity.cs" />
+    <Compile Include="Domain\IEntitySaver.cs" />
+    <Compile Include="Domain\NewsArticle.cs" />
+    <Compile Include="Domain\Reports\AggregateFunction.cs" />
+    <Compile Include="Domain\Reports\IChartDefinition.cs" />
+    <Compile Include="Domain\Reports\IReportDefinition.cs" />
+    <Compile Include="Domain\Reports\IReportDefinitionManager.cs" />
+    <Compile Include="Domain\Reports\ReportDefinitionFilter.cs" />
+    <Compile Include="Domain\Reports\ReportLocation.cs" />
+    <Compile Include="Domain\Reports\ReportStatus.cs" />
+    <Compile Include="Domain\Required.cs" />
+    <Compile Include="Domain\PlaceHolder.cs" />
+    <Compile Include="Domain\SimpleEntity.cs" />
+    <Compile Include="Domain\TestEntity.cs" />
+    <Compile Include="Domain\TestEntityFilter.cs" />
+    <Compile Include="Domain\UserActivityLogs\IUserActivityLogManager.cs" />
+    <Compile Include="Domain\UserActivityLogs\UserActivityType.cs" />
+    <Compile Include="Domain\UserActivityLogs\UserActivity.cs" />
+    <Compile Include="Domain\Users\Address.cs" />
+    <Compile Include="Domain\Users\Permission.cs" />
+    <Compile Include="Domain\Users\User.cs" />
+    <Compile Include="Domain\Users\UserFilter.cs" />
+    <Compile Include="Domain\Users\UserGroup.cs" />
+    <Compile Include="Domain\Users\UserRole.cs" />
+    <Compile Include="EntityUtils.cs" />
+    <Compile Include="Exceptions\AlreadyExistsException.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Exceptions\ImpossibleOperationException.cs" />
+    <Compile Include="ItemReportData.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="LoadUtils.cs" />
+    <Compile Include="Lock.cs" />
+    <Compile Include="Logic\ICopySupport.cs" />
+    <Compile Include="Managers\IAddressManager.cs" />
+    <Compile Include="Managers\IAnswerManager.cs" />
+    <Compile Include="Managers\IAnswerTypeManager.cs" />
+    <Compile Include="Managers\IAppointmentManager.cs" />
+    <Compile Include="Managers\IAvCalendarManager.cs" />
+    <Compile Include="Managers\ICalendarIntegrationManagers.cs" />
+    <Compile Include="Managers\IChoiceManager.cs" />
+    <Compile Include="Managers\IChoiceSetManager.cs" />
+    <Compile Include="Managers\ICountryGroupManager.cs" />
+    <Compile Include="Managers\ICountryManager.cs" />
+    <Compile Include="Managers\ICurrencyManager.cs" />
+    <Compile Include="Managers\IAbstractManager.cs" />
+    <Compile Include="Managers\IDBImageManager.cs" />
+    <Compile Include="Managers\IFilteredSearch.cs" />
+    <Compile Include="Managers\IFormManager.cs" />
+    <Compile Include="Managers\IIntegrationRecordManager.cs" />
+    <Compile Include="Managers\INewsManager.cs" />
+    <Compile Include="Managers\IQuestionGroupManager.cs" />
+    <Compile Include="Managers\IUserGroupManager.cs" />
+    <Compile Include="Managers\ILanguageManager.cs" />
+    <Compile Include="Managers\IManager.cs" />
+    <Compile Include="Managers\IQuestionManager.cs" />
+    <Compile Include="Managers\IRecordManager.cs" />
+    <Compile Include="Managers\IRecordsSearchManager.cs" />
+    <Compile Include="Managers\ISimpleSearch.cs" />
+    <Compile Include="Managers\ITestEntityManager.cs" />
+    <Compile Include="Managers\ITextValueManager.cs" />
+    <Compile Include="Managers\IUserManager.cs" />
+    <Compile Include="Managers\ManagerExtesions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\Application\BaseObjectHolder.cs" />
+    <Compile Include="IUnitOfWorkManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chain\Chain.Business\Chain.Business.csproj">
+      <Project>{ADBE6FDA-F657-411D-8050-99443DCC9727}</Project>
+      <Name>Chain.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chain\Chain.Common\Chain.Common.csproj">
+      <Project>{58BE1E17-AB3A-4084-AF2B-322439F6DE1B}</Project>
+      <Name>Chain.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GFK.Business.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="..\..\libs\msbuild\MSBuild.Community.Tasks.Targets" />
+  <Target Name="BeforeBuild">
+    <SvnInfo Condition=" '$(GenVersion)' == 'true' ">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnInfo>
+    <Message Text="retrieved revision: $(Revision)" Condition=" '$(GenVersion)' == 'true' " />
+    <Message Text="generate file Properties\AssemblyFileVersion.cs" Condition=" '$(GenVersion)' == 'true' " />
+    <CreateItem Include="Revision" AdditionalMetadata="ReplacementValue=$(Revision)" Condition=" '$(GenVersion)' == 'true' ">
+      <Output ItemName="RevisionTokens" TaskParameter="Include" />
+    </CreateItem>
+    <TemplateFile Template="$(ProjectDir)Properties\AssemblyFileVersion.cs.tmpl" OutputFilename="$(ProjectDir)Properties\AssemblyFileVersion.cs" Tokens="@(RevisionTokens)" Condition=" '$(GenVersion)' == 'true' " />
+  </Target>
+</Project>
